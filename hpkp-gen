@@ -22,7 +22,7 @@ head="Public-Key-Pins: max-age=5184000; "
 
 c=0
 for f in "$@"; do
-	if [ "${f: -4}" = ".crt" ]; then
+	if [ "${f: -4}" = ".crt" -o "${f: -4}" = ".pem" ]; then
 		pkey=`openssl x509 -pubkey -noout -in $f`
 	elif [ "${f: -4}" = ".csr" ]; then
 		pkey=`openssl req -pubkey -noout -in $f`
