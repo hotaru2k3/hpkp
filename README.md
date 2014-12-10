@@ -14,8 +14,8 @@ HTTP Public Key Pinning (HPKP) header. HPKP is a promising technology
 to mitigate many problems of the current system of certificate
 authorities.
 
-hpkp-gen can read public keys from certificates (.crt), private keys (.key)
-and certificate requests (.csr).
+hpkp-gen can read public keys from certificates (.crt or .pem),
+private keys (.key), and certificate requests (.csr).
 
 More Info
 =========

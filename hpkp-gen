@@ -13,7 +13,7 @@ if [ -z "$1" ]; then
 	echo "Usage: $0 [files]"
 	echo ""
 	echo "[files] should contain at least 2 files and can be of type"
-	echo ".crt (certificate), .csr (certificate request) or"
+	echo ".crt or .pem (certificate), .csr (certificate request) or"
 	echo ".key (private key)"
 	exit 1
 fi
