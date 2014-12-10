@@ -23,7 +23,6 @@ head="Public-Key-Pins: max-age=5184000; "
 c=0
 for f in "$@"; do
 	e=`printf %s "$f"|tail -c 4`
-	echo $e
 	if [ "$e" = ".crt" -o "$e" = ".pem" ]; then
 		pkey=`openssl x509 -pubkey -noout -in $f`
 	elif [ "$e" = ".csr" ]; then
