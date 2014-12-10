@@ -35,7 +35,7 @@ for f in "$@"; do
 		exit 255
 	fi
 	c=$(($c + 1))
-	phash=`echo "$pkey"|grep -v PUBLIC|openssl enc -base64 -d|openssl dgst -binary -sha256|openssl enc -base64`
+	phash=`echo "$pkey"|grep -vF PUBLIC|openssl enc -base64 -d|openssl dgst -binary -sha256|openssl enc -base64`
 	head="${head}pin-sha256=\"$phash\";"
 done
 
